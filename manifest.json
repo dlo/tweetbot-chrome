@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Tweetbot Linker",
+  "description": "This extension transforms Twitter links to open in Tweetbot.",
+  "version": "1.0",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
