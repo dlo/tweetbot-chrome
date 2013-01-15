@@ -17,7 +17,6 @@ var actions = [
 // [/https?:\/\/twitter\.com\/i\/user\/follow\?(.*)/, follow],
 /*
 function follow(s, query) {
-    console.log(query);
     user_id = getQueryStringValue(query, 'user_id');
     return "tweetbot:///follow/" + user_id;
 }
@@ -43,9 +42,7 @@ function search(s, query) {
 
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
-        console.log(details.requestBody);
         url = details.url;
-        console.log(url);
         var i = 0;
         for (i in actions) {
             action = actions[i];
