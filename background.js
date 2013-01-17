@@ -40,6 +40,8 @@ function search(s, query) {
 }
 */
 
+var openedTabId = null;
+
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
         url = details.url;
@@ -54,9 +56,19 @@ chrome.webRequest.onBeforeRequest.addListener(
             }
         }
 
+        if (url !== details.url && openedTabId == details.tabId) {
+            chrome.tabs.remove(details.tabId);
+        }
         return { redirectUrl: url };
     },
     {urls: ["*://*.twitter.com/*"]},
     ["blocking"]
 );
 
+chrome.tabs.onCreated.addListener(function(tab) {
+    openedTabId = tab.id;
+});
+
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+    openedTabId = null;
+});

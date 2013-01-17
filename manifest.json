@@ -6,7 +6,8 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "*://*.com/*"
+    "tabs",
+    "*://*/*"
   ],
   "background": {
     "scripts": ["background.js"]
