@@ -1,4 +1,4 @@
-## Tweetbot Linker for Chrome
+### tweetbot-chrome
 
 This unpacked extension will listen for various requests to Twitter.com URLs and will replace them Tweetbot-compatible ones instead.
 
@@ -6,7 +6,7 @@ There's not much here yet, but if you want to contribute, just create a pull req
 
 Enjoy!
 
-## Installation
+### Installation
 
 Will try to improve this soon, but for now...
 
