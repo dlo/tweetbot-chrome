@@ -12,5 +12,5 @@ Will try to improve this soon, but for now...
 
 1. Download and unzip the project.
 2. Open the extension manager for Chrome and click "Load unpacked extension".
-3. Select the folder which you unzipped Tweetbot Linker.
+3. Select the folder which you unzipped tweetbot-chrome.
 4. All done!
